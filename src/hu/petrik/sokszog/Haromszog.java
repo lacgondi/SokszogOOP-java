@@ -52,6 +52,7 @@ public class Haromszog extends Sokszog {
         }
     }
 
+    @Override
     public double getCircumference() {
         return this.getA() + this.b + this.c;
     }
@@ -60,6 +61,7 @@ public class Haromszog extends Sokszog {
         return getCircumference() / 2;
     }
 
+    @Override
     public double getArea() {
         return Math.sqrt(getS() * (getS() - this.getA()) * (getS() - b) * (getS() - c));
     }

@@ -16,10 +16,12 @@ public class Teglalap extends Sokszog {
         this.b = b;
     }
 
+    @Override
     public double getCircumference(){
         return (getA()+b)*2;
     }
 
+    @Override
     public double getArea(){
         return getA()*2+b*2;
     }
