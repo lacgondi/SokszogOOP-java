@@ -10,12 +10,12 @@ public class Haromszog extends Sokszog {
         this.c = c;
     }
 
-    public Haromszog(){
-        super((Math.random()*10)+1);
+    public Haromszog() {
+        super((Math.random() * 10) + 1);
         do {
-            this.b = (Math.random()*10)+1;
-            this.c = (Math.random()*10)+1;
-        }while (getA()+b > c || getA()+c > b || b+c> getA());
+            this.b = (Math.random() * 10) + 1;
+            this.c = (Math.random() * 10) + 1;
+        } while (getA() + b > c || getA() + c > b || b + c > getA());
 
     }
 
@@ -33,5 +33,22 @@ public class Haromszog extends Sokszog {
 
     public void setC(double c) {
         this.c = c;
+    }
+
+    public double getCircumference() {
+        return this.getA() + this.b + this.c;
+    }
+
+    private double getS() {
+        return getCircumference() / 2;
+    }
+
+    public double getArea() {
+        return Math.sqrt(getS() * (getS() - this.getArea()) * (getS() - b) * (getS() - c));
+    }
+
+    @Override
+    public String toString() {
+        return
     }
 }
