@@ -49,6 +49,6 @@ public class Haromszog extends Sokszog {
 
     @Override
     public String toString() {
-        return
+        return String.format("Háromszög: a = %f - b = %f - c = %f - K = %f - T = %f", getA(), b, c, getCircumference(), getArea());
     }
 }
