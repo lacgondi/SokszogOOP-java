@@ -11,6 +11,8 @@ public class Main {
         System.out.println(t1);
 
         Haromszog h1 = new Haromszog(2,3,4);
+        Haromszog h2 = new Haromszog();
+        System.out.println(h2.isEditable());
         System.out.println(h1.isEditable());
         System.out.println(h1.getCircumference());
         System.out.println(h1.getArea());
