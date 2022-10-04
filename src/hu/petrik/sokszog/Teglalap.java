@@ -23,4 +23,9 @@ public class Teglalap extends Sokszog {
     public double getArea(){
         return getA()*2+b*2;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Téglalap: a = %f - b = %f - K = %f - T = %f", getA(), b, getCircumference(), getArea());
+    }
 }
