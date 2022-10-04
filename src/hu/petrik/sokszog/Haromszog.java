@@ -14,6 +14,12 @@ public class Haromszog extends Sokszog {
         super((Math.random() * 5) + 1);
         this.b = (Math.random() * 5) + 1;
         this.c = (Math.random() * 5) + 1;
+
+        while (!isEditable()){
+            setA((Math.random() * 5) + 1);
+            this.b = (Math.random() * 5) + 1;
+            this.c = (Math.random() * 5) + 1;
+        }
     }
 
     public double getB() {
@@ -42,7 +48,7 @@ public class Haromszog extends Sokszog {
     public void setA(double a){
         super.setA(a);
         if(!this.isEditable()){
-            throw new IllegalArgumentException("A megadott 3szög nem szerkeszthető");
+            //throw new IllegalArgumentException("A megadott 3szög nem szerkeszthető");
         }
     }
 

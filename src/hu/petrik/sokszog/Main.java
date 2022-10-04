@@ -1,5 +1,8 @@
 package hu.petrik.sokszog;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Sokszog s1 = new Sokszog(2);
@@ -17,5 +20,10 @@ public class Main {
         System.out.println(h1.getCircumference());
         System.out.println(h1.getArea());
         System.out.println(h1);
+        List<Haromszog> haromszogList = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            haromszogList.add(new Haromszog());
+            System.out.println(haromszogList.get(i));
+        }
     }
 }
