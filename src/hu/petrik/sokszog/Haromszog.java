@@ -12,11 +12,8 @@ public class Haromszog extends Sokszog {
 
     public Haromszog() {
         super((Math.random() * 10) + 1);
-        do {
-            this.b = (Math.random() * 10) + 1;
-            this.c = (Math.random() * 10) + 1;
-        } while (getA() + b > c || getA() + c > b || b + c > getA());
-
+        this.b = (Math.random() * 10) + 1;
+        this.c = (Math.random() * 10) + 1;
     }
 
     public double getB() {
@@ -45,6 +42,14 @@ public class Haromszog extends Sokszog {
 
     public double getArea() {
         return Math.sqrt(getS() * (getS() - this.getArea()) * (getS() - b) * (getS() - c));
+    }
+
+    public boolean isEditable() {
+        if ((this.getA() + b) <= c || this.getA() + c <= b || b + c <= this.getA()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
