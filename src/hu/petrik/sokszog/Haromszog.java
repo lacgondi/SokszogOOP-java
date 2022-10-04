@@ -4,8 +4,10 @@ public class Haromszog extends Sokszog {
     private double b;
     private double c;
 
-    public Haromszog(double a) {
+    public Haromszog(double a, double b, double c) {
         super(a);
+        this.b = b;
+        this.c = c;
     }
 
     public Haromszog(){
