@@ -11,9 +11,9 @@ public class Haromszog extends Sokszog {
     }
 
     public Haromszog() {
-        super((Math.random() * 10) + 1);
-        this.b = (Math.random() * 10) + 1;
-        this.c = (Math.random() * 10) + 1;
+        super((Math.random() * 5) + 1);
+        this.b = (Math.random() * 5) + 1;
+        this.c = (Math.random() * 5) + 1;
     }
 
     public double getB() {
@@ -22,6 +22,9 @@ public class Haromszog extends Sokszog {
 
     public void setB(double b) {
         this.b = b;
+        if(!this.isEditable()){
+            throw new IllegalArgumentException("A megadott 3szög nem szerkeszthető");
+        }
     }
 
     public double getC() {
@@ -30,6 +33,17 @@ public class Haromszog extends Sokszog {
 
     public void setC(double c) {
         this.c = c;
+        if(!this.isEditable()){
+            throw new IllegalArgumentException("A megadott 3szög nem szerkeszthető");
+        }
+    }
+
+    @Override
+    public void setA(double a){
+        super.setA(a);
+        if(!this.isEditable()){
+            throw new IllegalArgumentException("A megadott 3szög nem szerkeszthető");
+        }
     }
 
     public double getCircumference() {
@@ -41,7 +55,7 @@ public class Haromszog extends Sokszog {
     }
 
     public double getArea() {
-        return Math.sqrt(getS() * (getS() - this.getArea()) * (getS() - b) * (getS() - c));
+        return Math.sqrt(getS() * (getS() - this.getA()) * (getS() - b) * (getS() - c));
     }
 
     public boolean isEditable() {
