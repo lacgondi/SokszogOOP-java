@@ -16,6 +16,11 @@ public class Teglalap extends Sokszog {
         this.b = b;
     }
 
+    public Teglalap() {
+        super((Math.random()*10)+1);
+        this.b = (Math.random()*10)+1;
+    }
+
     @Override
     public double getCircumference(){
         return (getA()+b)*2;
