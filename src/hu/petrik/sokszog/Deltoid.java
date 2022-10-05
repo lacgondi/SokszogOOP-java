@@ -13,6 +13,13 @@ public class Deltoid extends Sokszog {
         this.f = f;
     }
 
+    public Deltoid() {
+        super(Math.random()*10+1);
+        this.b = Math.random()*10+1;
+        this.e = Math.random()*10+1;
+        this.f = Math.random()*10+1;
+    }
+
     public double getE() {
         return e;
     }
